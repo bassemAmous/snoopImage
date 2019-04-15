@@ -22,7 +22,6 @@ function initCommand() {
 }
 
 
-
 /**
  * verify if command is right or wrong
  */

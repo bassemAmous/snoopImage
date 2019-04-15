@@ -14,7 +14,9 @@ const flickrOptions = {
   },
 };
 
-
+/**
+ * main call command and flickrManagement
+ */
 function handleMain() {
   Flickr.tokenOnly(flickrOptions, async (error, flickr) => {
     const keywords = command.commandMain();
