@@ -6,17 +6,29 @@ const dictionnaryManagement = require('../dictionnaryManagement/dictionnaryManag
 
 const urls = [];
 
-
+/**
+ * @param {string} results of the query
+ * get the top rated image
+ */
 function getTopRatedImage(results) {
   if (results.photos) return results.photos.photo[0];
   return null;
 }
-
+/**
+ * @param {string} photo is the returned object from the api
+ * get the image url
+ */
 function getUrl(photo) {
   return `https://farm${photo.farm
   }.staticflickr.com/${photo.server
   }/${photo.id}_${photo.secret}_m.jpg`;
 }
+/**
+ * @param {string} url
+ * @param {string} photo is the returned object from the api
+ * @param {string} downloadedImages is the array of all the images
+ * download image
+ */
 async function downloadImage(url, photo, downloadedImages) {
   photo.url = url;
   return new Promise(async resolve => {
@@ -35,6 +47,13 @@ async function downloadImage(url, photo, downloadedImages) {
 }
 
 
+/**
+ * @param {string} keyword to sarch
+ * @param {string} flickr the api
+ * @param {string} downloadedImages is the array of all the images
+ * @param {string} keywordsLength lenght of the keywrods
+ * search image
+ */
 function downloadImageFromFlickr(keyword, flickr, downloadedImages, resolve, keywordsLength) {
   flickr.photos.search({
     text: keyword,
@@ -55,10 +74,23 @@ function downloadImageFromFlickr(keyword, flickr, downloadedImages, resolve, key
   });
 }
 
+
+/**
+ * @param {string} keyword not found
+ * @param {string} word to replace
+ * replace keyword when it's not found with another from dictionnary
+ */
 function notFoundKeyword(keyword, word) {
   console.log(`keyword ${keyword} not found will be replaced with our magic dictionnary: ${word}`);
 }
 
+/**
+ * @param {string} keywords to sarch
+ * @param {string} flickr the api
+ * @param {string} downloadedImages is the array of all the images
+ * @param {string} keywordsLength lenght of the keywrods
+ * search download all images
+ */
 function downloadAllImagesFromFlickr(keywords, flickr, downloadedImages, resolve) {
   const keywordsLength = keywords.length;
 
@@ -67,7 +99,10 @@ function downloadAllImagesFromFlickr(keywords, flickr, downloadedImages, resolve
   });
 }
 
-
+/**
+ * @param {string} allImages to collage
+ * collage images
+ */
 function collageImages(allImages) {
   console.log('collage 10 Images starting');
   const size = 10;
