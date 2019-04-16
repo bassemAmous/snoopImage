@@ -1,7 +1,7 @@
 
-# SnoopImage
+# SnoopImage [(Docs)](https://bassemamous.github.io/snoopImage/)
 
-SnoopImage
+SnoopImage 
 
 ## Getting Started
 
@@ -43,7 +43,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://gi
 
 ## Documentation
 
-* See documentation under /Documentation
+* See documentation under [Online documentation](https://bassemamous.github.io/snoopImage/)
 
 
 
