@@ -1,12 +1,50 @@
-# snoopImage
 
-1- npm install .  
+# SnoopImage
+
+SnoopImage
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development or usage.
+
+### Prerequisites
+
+What things you need to install the software and how to install them
+
+```
+node: ^10.15.1
+npm:  ^6.8.0
+graphicsmagick: http://www.graphicsmagick.org/download.html
+```
+
+### Installing
+
+After cloning the project
+```
+1- npm install 
 2- create .env file set the API_KEY= and the SECRET=  (from your flickr account)       
-3- type your command with a list of the keyword:     
-        node index.js -k keyword1 keyword2
+```
 
-4- enjoy the magic .  
-In case of problem please verify that you have graphicsmagick installed or you can download it from http://www.graphicsmagick.org/download.html
+### How to use?
+
+ Type your command with a list of the keyword: 
+``` 
+node index.js -k keyword1 keyword2
+
+```
+
+## Authors
+
+* **Bassem Amous** - *bassem.amous93@gmail.com* - [LinkedIn](https://www.linkedin.com/in/bassem-amous-92a536120/)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Documentation
+
+* See documentation under /Documentation
+
 
 
 ******************************
